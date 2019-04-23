@@ -18,5 +18,7 @@ Deve haver um middleware que é chamado nas rotas `/major` e `/minor` e checa se
 # Setup
 
 `Clone o projeto`: https://github.com/c4pote/gonode-desafio1.git
+
 `No terminal`: Na pasta onde o arquivo package.json está localizado rodar o comando yarn para baixar as dependências.
+
 `Testando`: Ainda no terminal digite yarn start e o acesso já será possivel em http://127.0.0.1:3000
