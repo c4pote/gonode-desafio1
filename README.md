@@ -15,3 +15,8 @@ Configure uma aplicação utilizando **ExpressJS, Nunjucks, EditorConfig e ESLin
 
 Deve haver um middleware que é chamado nas rotas `/major` e `/minor` e checa se a informação de idade não está presente nos Query Params. Se essa informação não existir deve redirecionar o usuário para a página inicial com o formulário, caso contrário o middleware deve apenas continuar com o fluxo normal.
 
+# Setup
+
+`Clone o projeto`: https://github.com/c4pote/gonode-desafio1.git
+`No terminal`: Na pasta onde o arquivo package.json está localizado rodar o comando yarn para baixar as dependências.
+`Testando`: Ainda no terminal digite yarn start e o acesso já será possivel em http://127.0.0.1:3000
