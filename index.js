@@ -24,6 +24,7 @@ app.use(
   })
 )
 
+//Check the age if undefined go to form input this value
 const checkAgeMiddleware = (req, res, next) => {
   const { age } = req.query
   if (!age) {
@@ -32,20 +33,24 @@ const checkAgeMiddleware = (req, res, next) => {
   return next()
 }
 
+//1 Default Route
 app.get('/', (req, res) => {
   return res.render('index')
 })
 
+//Major Route
 app.get('/major', checkAgeMiddleware, (req, res) => {
   const { age } = req.query
   return res.render('major', { age })
 })
 
+//Minor Route
 app.get('/minor', checkAgeMiddleware, (req, res) => {
   const { age } = req.query
   return res.render('minor', { age })
 })
 
+//Check Route, age redirect
 app.post('/check', (req, res) => {
   const { age } = req.body
 
@@ -55,5 +60,5 @@ app.post('/check', (req, res) => {
     return res.redirect(`/minor?age=${age}`)
   }
 })
-
+//Define Server Port in this case port 3000, check in your brownser for http://127.0.0.1:3000
 app.listen(3000)
