@@ -1,11 +1,18 @@
 const express = require('express')
 const nunjucks = require('nunjucks')
 
+//Express
+//The app object has methods for
+//API https://expressjs.com/pt-br/4x/api.html
+//Routing HTTP requests; see for example, app.METHOD and app.param.
+//Configuring middleware; see app.route.
+//Rendering HTML views; see app.render.
+//Registering a template engine; see app.engine.
 const app = express()
 
-//Config Nunjucks
+//Nunjucks
 //The API for nunjucks covers rendering templates, adding filters and extensions, customizing template loading, and more.
-//https://mozilla.github.io/nunjucks/api.html#configure
+//API https://mozilla.github.io/nunjucks/api.html#configure
 //'views' Views Folder .njk Nunjucks template files.
 //autoescape (default: true) controls if output with dangerous characters are escaped automatically. See https://mozilla.github.io/nunjucks/api.html#autoescaping
 //express an express app that nunjucks should install to
