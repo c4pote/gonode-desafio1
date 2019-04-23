@@ -3,6 +3,14 @@ const nunjucks = require('nunjucks')
 
 const app = express()
 
+//Config Nunjucks
+//The API for nunjucks covers rendering templates, adding filters and extensions, customizing template loading, and more.
+//https://mozilla.github.io/nunjucks/api.html#configure
+//'views' Views Folder .njk Nunjucks template files.
+//autoescape (default: true) controls if output with dangerous characters are escaped automatically. See https://mozilla.github.io/nunjucks/api.html#autoescaping
+//express an express app that nunjucks should install to
+//watch (default: false) reload templates when they are changed (server-side). To use watch, make sure optional dependency chokidar is installed.
+
 nunjucks.configure('views', {
   autoescape: true,
   express: app,
